@@ -7,6 +7,7 @@ public class Alarm {
     private final double LowPressureThreshold = 17;
     private final double HighPressureThreshold = 21;
 
+    // TODO: Violate the Dependency Inversion Principle and Open-Closed Principle
     private Sensor sensor = new Sensor();
 
     private boolean alarmOn = false;
