@@ -12,4 +12,6 @@ public class AlarmTest {
     public void a_trivial_test() {
         assertEquals(5, 2 +3 );
     }
+
+    // TODO-new-feature: the alarm will be turned off before each checking of pressure
 }
