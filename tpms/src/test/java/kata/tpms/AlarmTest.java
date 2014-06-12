@@ -41,6 +41,19 @@ public class AlarmTest {
     // TODO-acceptance-test-working-on: a normal pressure value after a value outside the range should not stop the alarm
     @Test
     public void a_normal_pressure_value_after_a_value_outside_the_range_should_not_stop_the_alarm() {
+        // Arrange
+        FakeSensor fakeSensor = new FakeSensor();
+        fakeSensor.fakeNextThreePressurePsiValues(
+                new double[] {Alarm.LOW_PRESSURE_THRESHOLD
+                        , Alarm.LOW_PRESSURE_THRESHOLD - 1
+                , Alarm.HIGH_PRESSURE_THRESHOLD});
+        Alarm alarm = new Alarm(fakeSensor);
+
+        // Act
+        alarm.check();
+        alarm.check();
+        alarm.check();
+
         // Assert
         assertTrue(alarm.isAlarmOn());
     }
