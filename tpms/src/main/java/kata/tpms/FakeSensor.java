@@ -6,6 +6,7 @@ package kata.tpms;
 public class FakeSensor implements Detector {
     private double nextPressurePsiValue;
     private double[] nextThreeValues;
+    private int i = 0;
 
     public void fakeNextPressurePsiValue(double nextPressurePsiValue) {
         this.nextPressurePsiValue = nextPressurePsiValue;
@@ -13,7 +14,7 @@ public class FakeSensor implements Detector {
 
     @Override
     public double popNextPressurePsiValue() {
-        return this.nextPressurePsiValue;
+        return nextThreeValues[i++];
     }
 
     public void fakeNextThreePressurePsiValues(double[] nextThreeValues) {
