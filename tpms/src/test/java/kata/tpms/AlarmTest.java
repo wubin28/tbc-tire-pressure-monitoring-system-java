@@ -9,14 +9,17 @@ import static org.junit.Assert.assertFalse;
  * Created by benwu on 14-6-10.
  */
 public class AlarmTest {
-    @Test
-    public void a_trivial_test() {
-        assertEquals(5, 2 +3 );
-    }
-
     // TODO-acceptance-test-working-on: a normal pressure value should not raise the alarm
     @Test
     public void a_normal_pressure_value_should_not_raise_the_alarm() {
+        // Arrange
+        FakeSensor fakeSensor = new FakeSensor();
+        fakeSensor.fakeNextPressurePsiValue(Alarm.getLowPressureThreshold());
+        Alarm alarm = new Alarm(fakeSensor);
+
+        // Act
+        alarm.check();
+
         // Assert
         assertFalse(alarm.isAlarmOn());
     }
