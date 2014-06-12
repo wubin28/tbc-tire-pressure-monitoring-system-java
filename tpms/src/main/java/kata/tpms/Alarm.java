@@ -6,11 +6,16 @@ package kata.tpms;
 public class Alarm {
     public static final double LOW_PRESSURE_THRESHOLD = 17;
     public static final double HIGH_PRESSURE_THRESHOLD = 21;
+    private Detector detector;
 
     // TODO: Depending on a concrete Sensor violates the Dependency Inversion Principle and Open-Closed Principle
     private Sensor sensor = new Sensor();
 
     private boolean alarmOn = false;
+
+    public Alarm(Detector detector) {
+        this.detector = detector;
+    }
 
     public void check()
     {

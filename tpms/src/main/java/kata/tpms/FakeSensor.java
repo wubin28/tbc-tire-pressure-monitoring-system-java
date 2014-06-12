@@ -5,6 +5,6 @@ package kata.tpms;
  */
 public class FakeSensor implements Detector {
     public void fakeNextPressurePsiValue(double nextPressurePsiValue) {
-        
+
     }
 }
