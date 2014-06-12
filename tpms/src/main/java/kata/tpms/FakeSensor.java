@@ -4,12 +4,11 @@ package kata.tpms;
  * Created by benwu on 14-6-12.
  */
 public class FakeSensor implements Detector {
-    private double nextPressurePsiValue;
     private double[] nextThreeValues;
     private int i = 0;
 
     public void fakeNextPressurePsiValue(double nextPressurePsiValue) {
-        this.nextPressurePsiValue = nextPressurePsiValue;
+        this.nextThreeValues = new double[] {nextPressurePsiValue};
     }
 
     @Override
