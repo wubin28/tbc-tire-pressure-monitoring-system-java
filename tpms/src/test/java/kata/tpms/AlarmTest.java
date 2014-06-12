@@ -38,7 +38,6 @@ public class AlarmTest {
         assertTrue(alarm.isAlarmOn());
     }
 
-    // TODO-new-feature-working-on: the alarm will be turned off before each checking of pressure
     @Test
     public void a_normal_pressure_value_after_a_value_outside_the_range_should_stop_the_alarm() {
         // Arrange
