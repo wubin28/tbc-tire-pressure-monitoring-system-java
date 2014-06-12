@@ -13,6 +13,10 @@ public class Alarm {
 
     private boolean alarmOn = false;
 
+    public Alarm() {
+        this.detector = new Sensor();
+    }
+
     public Alarm(Detector detector) {
         this.detector = detector;
     }
