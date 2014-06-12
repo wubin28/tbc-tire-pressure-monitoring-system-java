@@ -9,7 +9,6 @@ import static org.junit.Assert.assertFalse;
  * Created by benwu on 14-6-10.
  */
 public class AlarmTest {
-    // TODO-acceptance-test-working-on: a normal pressure value should not raise the alarm
     @Test
     public void a_normal_pressure_value_should_not_raise_the_alarm() {
         // Arrange
