@@ -14,7 +14,7 @@ public class AlarmTest {
     public void a_normal_pressure_value_should_not_raise_the_alarm() {
         // Arrange
         FakeSensor fakeSensor = new FakeSensor();
-        fakeSensor.fakeNextPressurePsiValue(Alarm.getLowPressureThreshold());
+        fakeSensor.fakeNextPressurePsiValue(Alarm.LOW_PRESSURE_THRESHOLD);
         Alarm alarm = new Alarm(fakeSensor);
 
         // Act
