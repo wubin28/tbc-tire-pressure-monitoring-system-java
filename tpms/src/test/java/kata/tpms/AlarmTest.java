@@ -55,6 +55,6 @@ public class AlarmTest {
         alarm.check();
 
         // Assert
-        assertTrue(alarm.isAlarmOn());
+        assertFalse(alarm.isAlarmOn());
     }
 }
