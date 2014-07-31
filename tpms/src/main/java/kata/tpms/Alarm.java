@@ -12,7 +12,10 @@ public class Alarm {
 
     private boolean alarmOn = false;
 
-    // TODO-working-on: Retain the original interface for the default constructor of Alarm
+    public Alarm() {
+        this.sensor = new Sensor();
+    }
+
     public Alarm(Transducer transducer) {
 
     }
