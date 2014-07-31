@@ -9,7 +9,6 @@ import static org.junit.Assert.assertFalse;
  */
 public class AlarmTest {
 
-    // TODO-user-intent-test-working-on: a normal pressure value should not raise the alarm
     @Test
     public void a_normal_pressure_value_should_not_raise_the_alarm() {
         // Arrange

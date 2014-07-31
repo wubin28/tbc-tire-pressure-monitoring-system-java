@@ -7,7 +7,6 @@ public class Alarm {
     public static final double LOW_PRESSURE_THRESHOLD = 17;
     private final double HighPressureThreshold = 21;
 
-    // TODO-working-on: Depending on a concrete Sensor violates the Dependency Inversion Principle and Open-Closed Principle
     private Transducer transducer = null;
 
     private boolean alarmOn = false;
