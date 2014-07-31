@@ -4,7 +4,7 @@ package kata.tpms;
  * Created by benwu on 14-6-10.
  */
 public class Alarm {
-    private final double LowPressureThreshold = 17;
+    public static final double LOW_PRESSURE_THRESHOLD = 17;
     private final double HighPressureThreshold = 21;
 
     // TODO: Depending on a concrete Sensor violates the Dependency Inversion Principle and Open-Closed Principle
@@ -16,7 +16,7 @@ public class Alarm {
     {
         double psiPressureValue = sensor.popNextPressurePsiValue();
 
-        if (psiPressureValue < LowPressureThreshold || HighPressureThreshold < psiPressureValue)
+        if (psiPressureValue < LOW_PRESSURE_THRESHOLD || HighPressureThreshold < psiPressureValue)
         {
             alarmOn = true;
         }
