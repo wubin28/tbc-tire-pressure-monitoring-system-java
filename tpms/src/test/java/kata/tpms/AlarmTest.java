@@ -13,5 +13,5 @@ public class AlarmTest {
         assertEquals(5, 2 +3 );
     }
 
-    // TODO-new-feature: the alarm will be turned off before each checking of pressure
+    // TODO-new-feature: a normal pressure value after a value outside the range should stop the alarm
 }
